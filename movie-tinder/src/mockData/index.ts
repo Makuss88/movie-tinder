@@ -1,0 +1,40 @@
+interface IMockMovieData {
+  id: string;
+  imageURL: string;
+  title: string;
+  summary: string;
+  rating: number;
+}
+
+export const mockMovieData: IMockMovieData[] = [
+  {
+    id: "1and3011",
+    imageURL:
+      "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUzNTE2NTkzMV5BMl5BanBnXkFtZTgwMDAzOTUyMDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+    title: "Inferno",
+    summary: "Mega INFERMO",
+    rating: 5.3,
+  },
+  {
+    id: "2301abc",
+    imageURL:
+      "https://images-na.ssl-images-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SY1000_CR0,0,677,1000_AL_.jpg",
+    title: "Star Wars: Episode VII - The Force Awakens",
+    summary: "Special movie about make war in space ",
+    rating: 8.2,
+  },
+  {
+    id: "123aaa",
+    imageURL: "https://fwcdn.pl/fpo/10/47/1047/7749039.6.jpg",
+    title: "The Silence of the Lambs",
+    summary: "SILENCE!!!!",
+    rating: 8.8,
+  },
+  {
+    id: "123bbb",
+    imageURL: "https://fwcdn.pl/fpo/09/98/998/8021615.6.jpg",
+    title: "Forest Gump",
+    summary: "RUN FOREST RUN",
+    rating: 9.9,
+  },
+];
