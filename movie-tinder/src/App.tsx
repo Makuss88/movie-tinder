@@ -1,18 +1,19 @@
 import Grid from "@mui/material/Grid";
-import { useLayoutEffect } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { MainPage } from "./pages/MainPage/MainPage";
-// import { URL_WEBSITE } from "./static/const";
+import { URL_WEBSITE } from "./static/const";
 
 export const App = () => {
-  const getMovieData = async () => {
-    // const response = await fetch(URL_WEBSITE + "/recommendations");
-    // const data = await response.json();
-    // console.log(data);
-    // TODO: in future GET Data from DataBase
-  };
+  const [movieData, setMovieData] = useState<Object>([]);
 
-  useLayoutEffect(() => {
-    getMovieData();
+  useEffect(() => {
+    axios
+      .get(URL_WEBSITE)
+      .then((response) => {
+        setMovieData(response.data);
+      })
+      .catch((error: Error) => alert(error));
   }, []);
 
   return (
@@ -22,9 +23,10 @@ export const App = () => {
       justifyContent="cenetr"
       alignItems="center"
       height="100vh"
+      width="100%"
       style={{
         background:
-          "linear-gradient(0deg, rgba(18, 2, 15, 1) 0%, rgba(197, 32, 149, 1) 100%)",
+          "linear-gradient(0deg, rgba(18, 2, 15, 1) 0%, rgba(197, 32, 149, 1) 100%) center center fixed",
       }}
     >
       <MainPage />
