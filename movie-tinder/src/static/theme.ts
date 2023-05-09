@@ -1,6 +1,6 @@
 export const colors = {
   normal: {
-    black: "#0F0F1A",
+    black: "#555555",
     white: "#F7F7F7",
     greyText: "#707A8D",
     red: "#D25858",
@@ -9,6 +9,7 @@ export const colors = {
   hover: {
     red: "#c43535",
     green: "#83b20c",
+    black: "#707A8D",
   },
 };
 
