@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "./style";
+import { useMediaQuery } from "@mui/material";
+import { theme } from "../../../static/theme";
 
 interface IMainButton {
   label: string;
@@ -12,9 +14,11 @@ export const MainButton: React.FC<IMainButton> = ({
   onClick,
   disabled = false,
 }) => {
+  const smMedia = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Button onClick={onClick} disabled={disabled}>
-      <img src={label} alt="" width={100} />
+      <img src={label} alt="" width={smMedia ? 100 : 140} />
     </Button>
   );
 };
