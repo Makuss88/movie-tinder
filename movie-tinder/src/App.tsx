@@ -1,21 +1,9 @@
 import Grid from "@mui/material/Grid";
-import axios from "axios";
 import { Provider } from "react-redux";
 import { MainPage } from "./pages/MainPage/MainPage";
 import { store } from "./store/store";
-import { useState } from "react";
 
 export const App = () => {
-  const ax = axios.create({
-    baseURL: "http://localhost:3000/recommendations",
-  });
-
-  ax.get("db.json")
-    .then((res) => res.data)
-    .then((data) => {
-      console.log(data);
-    });
-
   return (
     <Provider store={store}>
       <Grid

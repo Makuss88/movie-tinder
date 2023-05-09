@@ -1,15 +1,15 @@
 import { Grid, Typography, useMediaQuery } from "@mui/material";
-import { mockMovieData } from "../../mockData";
-import { useState } from "react";
-import { MainButton } from "../Buttons/MainButton/MainButton";
-import { icons } from "../../static/icons";
-import { NoMovies } from "../NoMovies/NoMovies";
-import { theme, typography } from "../../static/theme";
-import { PUT_DATA_OPTION, URL_WEBSITE } from "../../static/const";
 import axios from "axios";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
+import { mockMovieData } from "../../mockData";
+import { PUT_DATA_OPTION, URL_WEBSITE } from "../../static/const";
+import { icons } from "../../static/icons";
+import { theme, typography } from "../../static/theme";
 import { actionCreators } from "../../store";
+import { MainButton } from "../Buttons/MainButton/MainButton";
+import { NoMovies } from "../NoMovies/NoMovies";
 
 
 export const ShowMovie = () => {
