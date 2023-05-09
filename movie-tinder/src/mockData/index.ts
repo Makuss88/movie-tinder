@@ -1,4 +1,4 @@
-interface IMockMovieData {
+export interface IMockMovieData {
   id: string;
   imageURL: string;
   title: string;
