@@ -1,7 +1,20 @@
 import Grid from "@mui/material/Grid";
+import { useLayoutEffect } from "react";
 import { MainPage } from "./pages/MainPage/MainPage";
+// import { URL_WEBSITE } from "./static/const";
 
 export const App = () => {
+  const getMovieData = async () => {
+    // const response = await fetch(URL_WEBSITE + "/recommendations");
+    // const data = await response.json();
+    // console.log(data);
+    // TODO: in future GET Data from DataBase
+  };
+
+  useLayoutEffect(() => {
+    getMovieData();
+  }, []);
+
   return (
     <Grid
       container

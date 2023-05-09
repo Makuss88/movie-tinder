@@ -3,7 +3,6 @@ import { styled } from "@mui/material/styles";
 export const Button = styled("button")({
   background: "transparent",
   border: "transparent",
-  borderRadius: "50%",
   marginInline: 24,
   cursor: "grab",
   transition: "all 250ms ease",

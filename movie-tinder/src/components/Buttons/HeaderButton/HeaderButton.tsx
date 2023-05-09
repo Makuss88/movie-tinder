@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 import { icons } from "../../../static/icons";
 
 interface IHeaderButton {
-  onClick: () => void;
+  onClick: () => void; 
 }
 
 export const HeaderButton: React.FC<IHeaderButton> = ({ onClick }) => {

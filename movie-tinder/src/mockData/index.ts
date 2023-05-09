@@ -19,7 +19,7 @@ export const mockMovieData: IMockMovieData[] = [
     id: "2301abc",
     imageURL:
       "https://images-na.ssl-images-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SY1000_CR0,0,677,1000_AL_.jpg",
-    title: "Star Wars: Episode VII - The Force Awakens",
+    title: "Star Wars",
     summary: "Special movie about make war in space ",
     rating: 8.2,
   },

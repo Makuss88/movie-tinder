@@ -3,11 +3,7 @@ import { icons } from "../../static/icons";
 import { HeaderButton } from "../Buttons/HeaderButton/HeaderButton";
 import { typography } from "../../static/theme";
 
-interface IHeader {
-  onClickHeader: () => void;
-}
-
-export const Header: React.FC<IHeader> = ({ onClickHeader }) => {
+export const Header = () => {
   return (
     <Grid
       container
@@ -28,7 +24,11 @@ export const Header: React.FC<IHeader> = ({ onClickHeader }) => {
         </Grid>
       </Grid>
       <Grid item>
-        <HeaderButton onClick={onClickHeader} />
+        <HeaderButton
+          onClick={() => {
+            console.log("go into next Page about User"); // TODO: in future make react-route
+          }}
+        />
       </Grid>
     </Grid>
   );
