@@ -11,7 +11,6 @@ import { actionCreators } from "../../store";
 import { MainButton } from "../Buttons/MainButton/MainButton";
 import { NoMovies } from "../NoMovies/NoMovies";
 
-
 export const ShowMovie = () => {
   const [movieCounter, setMovieCounter] = useState<number>(0);
   const [isNotMovie, setIsNotMovie] = useState<boolean>(false);
