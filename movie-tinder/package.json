@@ -1,4 +1,5 @@
 {
+  "homepage": "https://makuss88.github.io/movie-tinder/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -6,7 +7,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -52,6 +55,7 @@
     "@babel/preset-env": "^7.21.5",
     "@babel/preset-react": "^7.18.6",
     "babel-jest": "^29.5.0",
+    "gh-pages": "^5.0.0",
     "jest": "^27.5.1",
     "react-test-renderer": "^18.2.0"
   }
