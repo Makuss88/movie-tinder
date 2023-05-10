@@ -1,12 +1,15 @@
-import { ACTION_TYPE } from "../action-enum";
+export enum MOVIE_TYPE {
+  ACCEPT = "accept",
+  REJECT = "reject",
+}
 
 interface IAcceptAction {
-  type: ACTION_TYPE.ACCEPT;
+  type: MOVIE_TYPE.ACCEPT;
   payload: string;
 }
 
 interface IRejectAction {
-  type: ACTION_TYPE.REJECT;
+  type: MOVIE_TYPE.REJECT;
   payload: string;
 }
 

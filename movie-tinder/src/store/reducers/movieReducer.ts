@@ -1,14 +1,12 @@
-import { ACTION_TYPE } from "../action-enum";
-import { Action } from "../action-interface";
+import { MOVIE_TYPE, Action } from "../movieAction/const";
 
 const initialState: string[] = [];
 
 const reducer = (state: string[] = initialState, action: Action) => {
   switch (action.type) {
-    case ACTION_TYPE.ACCEPT:
+    case MOVIE_TYPE.ACCEPT:
       return state.concat(action.payload);
-    case ACTION_TYPE.REJECT:
-      return state;
+    case MOVIE_TYPE.REJECT:
     default:
       return state;
   }
