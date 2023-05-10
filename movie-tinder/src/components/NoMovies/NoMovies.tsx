@@ -1,7 +1,6 @@
 import { Grid, Typography } from "@mui/material";
-import React from "react";
-import { icons } from "../../static/icons";
-import { typography } from "../../static/theme";
+import { icons } from "../../utils/icons";
+import { typography } from "../../utils/theme";
 
 export const NoMovies = () => {
   return (
@@ -16,8 +15,8 @@ export const NoMovies = () => {
           OMG, You filter all movies...
         </Typography>
       </Grid>
-      <Grid item marginTop={"40px"}>
-        <img src={icons.noCameraIcon} alt="no_camera" width="400" />
+      <Grid item marginTop="40px">
+        <img src={icons.noCameraIcon} alt="no_camera" width="400px" />
       </Grid>
     </Grid>
   );

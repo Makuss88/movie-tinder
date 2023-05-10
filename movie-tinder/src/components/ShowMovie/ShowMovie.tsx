@@ -4,12 +4,13 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { mockMovieData } from "../../mockData";
-import { PUT_DATA_OPTION, URL_WEBSITE } from "../../static/const";
-import { icons } from "../../static/icons";
-import { theme, typography } from "../../static/theme";
+import { PUT_DATA_OPTION, URL_WEBSITE } from "../../utils/const";
+import { icons } from "../../utils/icons";
+import { theme, typography } from "../../utils/theme";
 import { actionCreators } from "../../store";
-import { MainButton } from "../Buttons/MainButton/MainButton";
+import { MainButton } from "../UI/Buttons/MainButton/MainButton";
 import { NoMovies } from "../NoMovies/NoMovies";
+import { useIsSmSize } from "../../hooks/useMediaQuery";
 
 export const ShowMovie = () => {
   const [movieCounter, setMovieCounter] = useState<number>(0);
@@ -25,10 +26,9 @@ export const ShowMovie = () => {
     .then((res) => res.data)
     .then((data) => {
       setMovieList(data);
-      console.log(data);
     });
 
-  const smMedia = useMediaQuery(theme.breakpoints.down("sm"));
+  const smMedia = useIsSmSize();
 
   const dispatch = useDispatch();
   const { acceptAction, rejectAction } = bindActionCreators(
