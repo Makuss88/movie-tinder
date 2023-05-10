@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import { useIsSmSize } from "../../hooks/useMediaQuery";
 import { icons } from "../../utils/icons";
 import { typography } from "../../utils/theme";

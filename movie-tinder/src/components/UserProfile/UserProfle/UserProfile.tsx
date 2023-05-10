@@ -1,10 +1,10 @@
 import { Grid, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
+import { useIsSmSize } from "../../../hooks/useMediaQuery";
 import { State } from "../../../store";
+import { typography } from "../../../utils/theme";
 import { MovieList } from "../MovieList/MovieList";
 import { NoMovieList } from "../NoMovieList/NoMovieList";
-import { useIsSmSize } from "../../../hooks/useMediaQuery";
-import { typography } from "../../../utils/theme";
 
 export const UserProfile = () => {
   const state = useSelector((state: State) => state.movie);

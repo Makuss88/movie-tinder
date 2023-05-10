@@ -1,11 +1,8 @@
-import React from "react";
 import Typography from "@mui/material/Typography";
-import { useIsSmSize } from "../../../hooks/useMediaQuery";
-import { typography } from "../../../utils/theme";
 import { useSelector } from "react-redux";
+import { useIsSmSize } from "../../../hooks/useMediaQuery";
 import { State } from "../../../store";
-
-
+import { typography } from "../../../utils/theme";
 
 export const MovieList = () => {
   const state = useSelector((state: State) => state.movie);

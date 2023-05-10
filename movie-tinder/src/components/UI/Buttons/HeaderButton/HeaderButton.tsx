@@ -1,10 +1,11 @@
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
-import { Button } from "./style";
 import { icons } from "../../../../utils/icons";
+import { Button } from "./style";
 
 export const HeaderButton = () => {
+  
   return (
     <Link to="/myProfile">
       <Button>

@@ -1,4 +1,4 @@
-import { MOVIE_TYPE, Action } from "../movieAction/const";
+import { Action, MOVIE_TYPE } from "../movieAction/const";
 
 const initialState: string[] = [];
 

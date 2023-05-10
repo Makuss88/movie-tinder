@@ -2,8 +2,8 @@ import { Grid } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
 import { ShowMovie } from "../../components/ShowMovie/ShowMovie";
-import { useIsSmSize } from "../../hooks/useMediaQuery";
 import { UserProfile } from "../../components/UserProfile/UserProfle/UserProfile";
+import { useIsSmSize } from "../../hooks/useMediaQuery";
 
 export const Router = () => {
   const smMedia = useIsSmSize();

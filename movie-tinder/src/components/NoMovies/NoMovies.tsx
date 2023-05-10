@@ -3,6 +3,7 @@ import { icons } from "../../utils/icons";
 import { typography } from "../../utils/theme";
 
 export const NoMovies = () => {
+  
   return (
     <Grid
       container

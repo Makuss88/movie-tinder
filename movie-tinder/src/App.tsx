@@ -11,8 +11,8 @@ export const App = () => {
         flexDirection="column"
         justifyContent="cenetr"
         alignItems="center"
-        height="100vh"
         width="100%"
+        height="100vh"
         style={{
           background:
             "linear-gradient(0deg, rgba(18, 2, 15, 1) 0%, rgba(197, 32, 149, 1) 100%) center center fixed",

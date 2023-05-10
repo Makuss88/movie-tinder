@@ -1,32 +1,19 @@
-import { Grid, Typography, useMediaQuery } from "@mui/material";
-import axios from "axios";
+import { Grid, Typography } from "@mui/material";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
-import { mockMovieData } from "../../mockData";
-import { PUT_DATA_OPTION, URL_WEBSITE } from "../../utils/const";
-import { icons } from "../../utils/icons";
-import { theme, typography } from "../../utils/theme";
-import { actionCreators } from "../../store";
-import { MainButton } from "../UI/Buttons/MainButton/MainButton";
-import { NoMovies } from "../NoMovies/NoMovies";
 import { useIsSmSize } from "../../hooks/useMediaQuery";
+import { mockMovieData } from "../../mockData";
+import { actionCreators } from "../../store";
+import { MOVIE_TYPE } from "../../store/movieAction/const";
+import { putData } from "../../utils/function";
+import { icons } from "../../utils/icons";
+import { typography } from "../../utils/theme";
+import { NoMovies } from "../NoMovies/NoMovies";
+import { MainButton } from "../UI/Buttons/MainButton/MainButton";
 
 export const ShowMovie = () => {
   const [movieCounter, setMovieCounter] = useState<number>(0);
-  const [isNotMovie, setIsNotMovie] = useState<boolean>(false);
-
-  const [movieList, setMovieList] = useState([]);
-
-  const ax = axios.create({
-    baseURL: "http://localhost:3000/recommendations",
-  });
-
-  ax.get("db.json")
-    .then((res) => res.data)
-    .then((data) => {
-      setMovieList(data);
-    });
 
   const smMedia = useIsSmSize();
 
@@ -36,44 +23,25 @@ export const ShowMovie = () => {
     dispatch
   );
 
-  const putData = async (
-    // TODO, now we have error, because we don't have our DB
-    counter: number,
-    recommendationsPath: string
-  ): Promise<void> => {
-    const idData: string = mockMovieData[counter].id;
-    axios
-      .put(URL_WEBSITE + `recommendations/${idData}/${recommendationsPath}}`, {
-        mockMovieData,
-      })
-      .then((response) => console.log(response.data))
-      .catch((err) => console.error(err));
-  };
-
-  const clickHandler = (getInfo: string): void => {
-    if (movieCounter === mockMovieData.length - 1) {
-      setIsNotMovie(true);
-    } else {
-      switch (getInfo) {
-        case PUT_DATA_OPTION.REJECT:
-          rejectAction(mockMovieData[movieCounter].title);
-          putData(movieCounter, PUT_DATA_OPTION.REJECT);
-          setMovieCounter(movieCounter + 1);
-          break;
-        case PUT_DATA_OPTION.ACCEPT:
-          acceptAction(mockMovieData[movieCounter].title);
-          putData(movieCounter, PUT_DATA_OPTION.ACCEPT);
-          setMovieCounter(movieCounter + 1);
-          break;
-        default:
-          return;
-      }
+  const putDataHandler = (getInfo: string): void => {
+    switch (getInfo) {
+      case MOVIE_TYPE.ACCEPT:
+        acceptAction(mockMovieData[movieCounter].title);
+        putData(mockMovieData, movieCounter, MOVIE_TYPE.ACCEPT);
+        break;
+      case MOVIE_TYPE.REJECT:
+        rejectAction(mockMovieData[movieCounter].title);
+        putData(mockMovieData, movieCounter, MOVIE_TYPE.REJECT);
+        break;
+      default:
+        return;
     }
+    setMovieCounter(movieCounter + 1);
   };
 
   return (
     <>
-      {!isNotMovie ? (
+      {movieCounter === mockMovieData.length - 1 ? (
         <Grid
           container
           flexDirection="column"
@@ -109,13 +77,13 @@ export const ShowMovie = () => {
             <Grid item>
               <MainButton
                 label={icons.rejectIcon}
-                onClick={() => clickHandler("reject")}
+                onClick={() => putDataHandler("reject")}
               />
             </Grid>
             <Grid item>
               <MainButton
                 label={icons.acceptIcon}
-                onClick={() => clickHandler("accept")}
+                onClick={() => putDataHandler("accept")}
               />
             </Grid>
           </Grid>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "./style";
 import { useIsSmSize } from "../../../../hooks/useMediaQuery";
+import { Button } from "./style";
 
 interface IMainButton {
   label: string;

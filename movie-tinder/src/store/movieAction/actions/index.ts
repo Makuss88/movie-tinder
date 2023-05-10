@@ -1,5 +1,5 @@
 import { Dispatch } from "redux";
-import { MOVIE_TYPE, Action } from "../const";
+import { Action, MOVIE_TYPE } from "../const";
 
 export const acceptAction = (name: string) => {
   return (dispatch: Dispatch<Action>) => {
