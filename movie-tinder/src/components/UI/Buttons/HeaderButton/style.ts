@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { colors } from "../../../static/theme";
+import { colors } from "../../../../utils/theme";
 
 export const Button = styled("button")({
   padding: 8,

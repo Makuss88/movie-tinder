@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "./style";
-import { useMediaQuery } from "@mui/material";
-import { theme } from "../../../static/theme";
+import { useIsSmSize } from "../../../../hooks/useMediaQuery";
 
 interface IMainButton {
   label: string;
@@ -14,7 +13,7 @@ export const MainButton: React.FC<IMainButton> = ({
   onClick,
   disabled = false,
 }) => {
-  const smMedia = useMediaQuery(theme.breakpoints.down("sm"));
+  const smMedia = useIsSmSize();
 
   return (
     <Button onClick={onClick} disabled={disabled}>

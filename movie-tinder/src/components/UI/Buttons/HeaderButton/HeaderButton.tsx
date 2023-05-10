@@ -1,9 +1,8 @@
-import React from "react";
-import { Button } from "./style";
-import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material";
-import { icons } from "../../../static/icons";
+import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
+import { Button } from "./style";
+import { icons } from "../../../../utils/icons";
 
 export const HeaderButton = () => {
   return (

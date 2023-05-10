@@ -1,11 +1,12 @@
-import { Grid, Typography, useMediaQuery } from "@mui/material";
-import { icons } from "../../static/icons";
-import { HeaderButton } from "../Buttons/HeaderButton/HeaderButton";
-import { typography, theme } from "../../static/theme";
 import { Link } from "react-router-dom";
+import { Grid, Typography } from "@mui/material";
+import { useIsSmSize } from "../../hooks/useMediaQuery";
+import { icons } from "../../utils/icons";
+import { typography } from "../../utils/theme";
+import { HeaderButton } from "../UI/Buttons/HeaderButton/HeaderButton";
 
 export const Header = () => {
-  const smMedia = useMediaQuery(theme.breakpoints.down("sm"));
+  const smMedia = useIsSmSize();
 
   return (
     <Grid
