@@ -41,7 +41,7 @@ export const ShowMovie = () => {
 
   return (
     <>
-      {movieCounter === mockMovieData.length - 1 ? (
+      {movieCounter !== mockMovieData.length ? (
         <Grid
           container
           flexDirection="column"
