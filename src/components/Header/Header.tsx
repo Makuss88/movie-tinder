@@ -16,7 +16,7 @@ export const Header = () => {
       width="100%"
       paddingY={smMedia ? "20px" : "40px"}
     >
-      <Link to="/">
+      <Link to="/movie-tinder">
         <Grid item>
           <Grid container alignItems="center">
             <Grid item>

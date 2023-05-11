@@ -14,7 +14,7 @@ export const Router = () => {
         <Header />
         <Routes>
           <Route path="/myProfile" Component={UserProfile} />
-          <Route path="/" Component={ShowMovie} />
+          <Route path="/movie-tinder" Component={ShowMovie} />
         </Routes>
       </Grid>
     </BrowserRouter>
