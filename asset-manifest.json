@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/movie-tinder/static/css/main.e6c13ad2.css",
-    "main.js": "/movie-tinder/static/js/main.4cbe580f.js",
-    "static/js/787.28cb0dcd.chunk.js": "/movie-tinder/static/js/787.28cb0dcd.chunk.js",
-    "static/media/myProfileIcon.svg": "/movie-tinder/static/media/myProfileIcon.d4fc060ffc6040ca44034d7eff52551b.svg",
-    "static/media/headerIcon.svg": "/movie-tinder/static/media/headerIcon.8cf7b9877f5f7427f1236c77e4fb29e3.svg",
-    "static/media/noCameraIcon.svg": "/movie-tinder/static/media/noCameraIcon.6e4c16a79afb3c4b674ece6306b2429c.svg",
-    "static/media/rejectIcon.svg": "/movie-tinder/static/media/rejectIcon.a118e9c61a86a45ffb27e884f6769a23.svg",
-    "index.html": "/movie-tinder/index.html",
-    "static/media/acceptIcon.svg": "/movie-tinder/static/media/acceptIcon.957e6663135e208695afb2d276ab4f76.svg",
-    "main.e6c13ad2.css.map": "/movie-tinder/static/css/main.e6c13ad2.css.map",
-    "main.4cbe580f.js.map": "/movie-tinder/static/js/main.4cbe580f.js.map",
-    "787.28cb0dcd.chunk.js.map": "/movie-tinder/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/tinderMovieWebsite/static/css/main.e6c13ad2.css",
+    "main.js": "/tinderMovieWebsite/static/js/main.b34db01b.js",
+    "static/js/787.28cb0dcd.chunk.js": "/tinderMovieWebsite/static/js/787.28cb0dcd.chunk.js",
+    "static/media/myProfileIcon.svg": "/tinderMovieWebsite/static/media/myProfileIcon.d4fc060ffc6040ca44034d7eff52551b.svg",
+    "static/media/headerIcon.svg": "/tinderMovieWebsite/static/media/headerIcon.8cf7b9877f5f7427f1236c77e4fb29e3.svg",
+    "static/media/noCameraIcon.svg": "/tinderMovieWebsite/static/media/noCameraIcon.6e4c16a79afb3c4b674ece6306b2429c.svg",
+    "static/media/rejectIcon.svg": "/tinderMovieWebsite/static/media/rejectIcon.a118e9c61a86a45ffb27e884f6769a23.svg",
+    "index.html": "/tinderMovieWebsite/index.html",
+    "static/media/acceptIcon.svg": "/tinderMovieWebsite/static/media/acceptIcon.957e6663135e208695afb2d276ab4f76.svg",
+    "main.e6c13ad2.css.map": "/tinderMovieWebsite/static/css/main.e6c13ad2.css.map",
+    "main.b34db01b.js.map": "/tinderMovieWebsite/static/js/main.b34db01b.js.map",
+    "787.28cb0dcd.chunk.js.map": "/tinderMovieWebsite/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.4cbe580f.js"
+    "static/js/main.b34db01b.js"
   ]
 }
