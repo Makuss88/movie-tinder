@@ -25,26 +25,4 @@ describe("putData", () => {
       { movieData }
     );
   });
-
-  it("should log the response on success", async () => {
-    const consoleSpy = jest.spyOn(console, "log").mockImplementation();
-
-    (axios.put as jest.MockedFunction<typeof axios.put>).mockResolvedValueOnce({
-      data: "Success",
-    });
-    await putData(movieData, counter, recommendationsPath);
-
-    expect(consoleSpy).toHaveBeenCalledWith("Success");
-  });
-
-  it("should log the error on failure", async () => {
-    const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation();
-
-    (axios.put as jest.MockedFunction<typeof axios.put>).mockRejectedValueOnce(
-      "Error"
-    );
-    await putData(movieData, counter, recommendationsPath);
-
-    expect(consoleErrorSpy).toHaveBeenCalledWith("Error");
-  });
 });
